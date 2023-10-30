@@ -42,6 +42,23 @@ a:hover {
   position: relative;
 }
 
+header {
+  width: 100%;
+  transition: 200ms ease-out 0s;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.903), transparent);
+  z-index: 111;
+}
+header.sticky {
+  position: fixed;
+  top: 0;
+  transition: 200ms ease-out 0s;
+  box-sizing: content-box !important;
+}
+
+section.first-m {
+  margin-top: 86px;
+}
+
 .main .nav nav {
   border-bottom: 3px solid rgb(252, 238, 10);
   margin-top: 15px;
@@ -93,6 +110,11 @@ a:hover {
 
 .main header .headermenu {
   gap: 6px;
+}
+.main header .headermenu.col-lg-5 {
+  flex: 0 0 auto;
+  width: -moz-max-content !important;
+  width: max-content !important;
 }
 
 .main header .headermenu p {
@@ -363,6 +385,74 @@ footer .footer_bottom .connection button {
   height: 50px;
 }
 
+@media (min-height: 1854px) {
+  .main {
+    height: 100vh;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1520px !important;
+  }
+  .panel li {
+    width: 358px;
+    height: 358px;
+  }
+  .panel li img {
+    width: 213px;
+  }
+  .panel ul {
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 20px;
+  }
+  .panel li a {
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 24px;
+    width: 100%;
+  }
+  .smartphone {
+    width: 304px;
+  }
+  footer .footer_bottom ul li a {
+    color: rgb(252, 238, 10);
+    text-decoration: none;
+    font-size: 20px;
+  }
+  footer .footer_bottom .connection p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1101px) {
+  nav .exit {
+    display: none;
+  }
+  .panel ul li .none_for_comp {
+    display: none;
+  }
+  .phone_widht {
+    gap: 15px;
+  }
+}
+@media (min-width: 1269px) and (max-width: 1400px) {
+  .nav_left.col-lg-10 {
+    flex: 0 0 auto;
+    width: 81.333333% !important;
+  }
+  .phone_widht.col-lg-2 {
+    flex: 0 0 auto;
+    width: 18.666667% !important;
+  }
+  .nav_main {
+    gap: 15px;
+  }
+  .nav_main.col-7 {
+    flex: 0 0 auto;
+    width: -moz-max-content !important;
+    width: max-content !important;
+  }
+}
 @media (min-width: 1101px) and (max-width: 1269px) {
   .main header .search {
     border: 1px solid rgb(252, 238, 10);
@@ -393,6 +483,37 @@ footer .footer_bottom .connection button {
   }
 }
 @media (min-width: 768px) and (max-width: 1100px) {
+  header {
+    width: 100%;
+    transition: 200ms ease-out 0s;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.903), transparent);
+    z-index: 111;
+  }
+  header.sticky {
+    position: relative !important;
+    top: 0;
+    transition: 200ms ease-out 0s;
+    box-sizing: content-box !important;
+  }
+  section.first-m {
+    margin-top: 0;
+  }
+  .nav {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.903), transparent);
+    z-index: 111;
+  }
+  #header {
+    padding-top: 70px;
+  }
+  p {
+    font-size: 16px;
+  }
+  nav .exit {
+    width: -moz-max-content;
+    width: max-content;
+  }
   .splide__arrows {
     display: none !important;
   }
@@ -448,17 +569,28 @@ footer .footer_bottom .connection button {
     width: 146px;
   }
   .nav_left {
+    margin-right: -96px;
     justify-content: start !important;
   }
   .nav_left.justify-content-lg-center {
     justify-content: start !important;
   }
+  .nav_left.col-md-4 {
+    flex: 0 0 auto;
+    width: -moz-max-content !important;
+    width: max-content !important;
+  }
   .phone_widht {
     justify-content: end !important;
   }
+  .phone_widht.col-md-4 {
+    flex: 0 0 auto;
+    width: -moz-max-content !important;
+    width: max-content !important;
+  }
   .phone_widht img {
-    width: 25px;
-    height: 25px;
+    width: 21px;
+    height: 21px;
     margin-right: 10px;
   }
   header .logo {
@@ -516,6 +648,30 @@ footer .footer_bottom .connection button {
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
+  header {
+    width: 100%;
+    transition: 200ms ease-out 0s;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.903), transparent);
+    z-index: 111;
+  }
+  header.sticky {
+    position: relative !important;
+    top: 0;
+    transition: 200ms ease-out 0s;
+    box-sizing: content-box !important;
+  }
+  section.first-m {
+    margin-top: 0;
+  }
+  .nav {
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.903), transparent);
+    z-index: 111;
+  }
+  #header {
+    padding-top: 55px;
+  }
   nav .exit {
     width: 10px;
   }
@@ -696,7 +852,7 @@ footer .footer_bottom .connection button {
     justify-content: start !important;
   }
   .phone_widht {
-    width: 202px !important;
+    width: 222px !important;
     justify-content: end;
   }
   .icon_header {
